@@ -4,13 +4,13 @@ import java.util.Scanner
 
 fun main() {
     var scanner =Scanner(System.`in`)
-    var buy = 1
+    val ticket = 0
 
-    while (buy != 0){
-            buy = scanner.nextInt()
-        if (buy != -1) {
+    while (ticket != -1){
             print("please enter total ticket:");
-            var ticket =scanner.nextInt()
+          var ticket =scanner.nextInt()
+          //  var ticket = scanner.nextInt()
+        if (ticket != -1) {
             print("how many round_trip:")
             var round = scanner.nextInt()
             val design = design(ticket, round)
@@ -24,7 +24,7 @@ fun main() {
 class design(var ticket:Int,var round:Int){
 
     fun print(){
-        print("total ticket:$ticket\nround_trip:$round\ntotal:" +
+        println("total ticket:$ticket\nround_trip:$round\ntotal:" +
                 "${((ticket-round)*1000+round*2000*0.9).toInt()}")
     }
 
